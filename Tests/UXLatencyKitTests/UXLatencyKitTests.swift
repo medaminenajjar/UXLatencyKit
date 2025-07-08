@@ -137,7 +137,6 @@ struct UXLatencyKitTests {
 
         let inspected = try view.inspect()
         try inspected.callOnTapGesture()
-        try inspected.callOnAppear()
 
         await tracker.recordStart(id: testID)
         await tracker.recordFeedback(id: testID)
