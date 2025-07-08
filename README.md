@@ -24,7 +24,7 @@ UXLatencyKit records the start of an interaction and the moment visual feedback 
 - 📊 Live overlay showing latency per component
 - 📤 CSV exporter for QA or performance dashboards
 - ✅ Built with Swift Concurrency (`actor` architecture)
-- 🔌 Easy SwiftUI integration with `.trackLatency(id:)`
+- 🔌 Easy SwiftUI integration with `.trackLatencyTap(id:) and .trackLatencyFeedback(id:)`
 
 ---
 
@@ -34,13 +34,13 @@ Add via Swift Package Manager:
 
 ```swift
 .package(url: "https://github.com/yourusername/UXLatencyKit.git", from: "1.0.0")
-
+```
 
 Then import:
 
 ```swift
 import UXLatencyKit
-
+```
 
 ## 🔤 Usage Example
 
@@ -100,12 +100,10 @@ UXLatencyTracker.shared.logFinalSummary()
 🧾 Output will look like this in the console:
 
 📦 UX Latency Summary
-• Total interactions: 24
+• Total interactions: 20
 • Average latency: 0.147s
 • Max latency: 0.348s
 • tap: 20
-• longPress: 2
-• swipe: 2
 
 UXLatencyKit prints latency values directly to the console in CSV format:
 
